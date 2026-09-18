@@ -1,0 +1,177 @@
+/* ========== Trailer Page Styles ========== */
+
+/* إعدادات عامة */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  background-color:  #4d0000;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(#0a0000);
+  padding: 15px 40px;
+  box-shadow: 0 4px 20px rgba(255, 37, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #a0d0ff;
+  transform: translateY(-2px);
+}
+
+/* القسم الرئيسي */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* عنوان الصفحة */
+main > section:first-child {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+main > section:first-child h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color:#ff2500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+main > section:first-child h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background:#ff2500;
+  border-radius: 2px;
+}
+
+/* شبكة التريلرات */
+main > section:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+}
+
+/* كروت التريلر */
+article {
+  background: #141414;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #1f1f1f;
+}
+
+article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(1, 113, 249, 0.25);
+  border-color: #0171f9;
+}
+
+article h3 {
+  margin: 0;
+  padding: 18px 20px 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #0d1b2a, #141414);
+}
+
+/* الفيديو */
+article video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border-top: 1px solid #222;
+}
+
+/* الفوتر */
+footer {
+  background: #050505;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  border-top: 1px solid #1a1a1a;
+}
+
+footer p {
+  margin: 0;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* تجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main > section:first-child h2 {
+    font-size: 2rem;
+  }
+
+  main > section:nth-child(2) {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}

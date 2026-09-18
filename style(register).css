@@ -1,0 +1,256 @@
+/* ==============================
+   World Series - Create Account
+   ألوان: بني + أسود
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(135deg, #1a0f0a 0%, #2c1a12 40%, #1a0f0a 100%);
+    color: #e8d5c4;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ---------- Header & Nav ---------- */
+header {
+    background: rgba(20, 12, 8, 0.95);
+    border-bottom: 2px solid #6b3e26;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+nav h1 {
+    font-size: 1.9rem;
+    color: #d4a574;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #c9a88a;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #f0d9b5;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #a65d3a;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------- Main Content ---------- */
+main {
+    max-width: 550px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: rgba(30, 18, 12, 0.85);
+    border: 1px solid #5c3a25;
+    border-radius: 16px;
+    padding: 45px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+section h2 {
+    font-size: 2.2rem;
+    color: #d4a574;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+section > p {
+    text-align: center;
+    color: #b89a7e;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+/* ---------- Form ---------- */
+form div {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d4a574;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    background: #1a100c;
+    border: 1.5px solid #5c3a25;
+    border-radius: 8px;
+    color: #f0e0d0;
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #a65d3a;
+    box-shadow: 0 0 0 3px rgba(166, 93, 58, 0.25);
+    background: #22150f;
+}
+
+input::placeholder {
+    color: #7a5c45;
+}
+
+/* أزرار إظهار كلمة المرور */
+#showPassword,
+#showConfirmPassword {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #6b3e26;
+    color: #c9a88a;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.25s ease;
+}
+
+#showPassword:hover,
+#showConfirmPassword:hover {
+    background: #6b3e26;
+    color: #f0e0d0;
+}
+
+/* زر إنشاء الحساب */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #8b4e2f, #6b3e26);
+    border: none;
+    border-radius: 8px;
+    color: #f5e6d3;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #a65d3a, #8b4e2f);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 78, 47, 0.4);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* رسالة النموذج */
+#formMessage {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.95rem;
+    min-height: 24px;
+}
+
+/* رابط تسجيل الدخول */
+section > p:last-of-type {
+    text-align: center;
+    margin-top: 30px;
+    color: #b89a7e;
+}
+
+section > p:last-of-type a {
+    color: #d4a574;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 6px;
+    transition: color 0.3s ease;
+}
+
+section > p:last-of-type a:hover {
+    color: #f0d9b5;
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    background: rgba(15, 9, 6, 0.9);
+    border-top: 1px solid #4a2e1c;
+    color: #8a6b52;
+    font-size: 0.95rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    section {
+        padding: 35px 25px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}

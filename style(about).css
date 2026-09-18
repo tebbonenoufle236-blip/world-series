@@ -1,0 +1,79 @@
+header {
+    background-color: #0f0a07; /* أسود أعمق */
+    border-bottom: 3px solid #8b5a2b; /* بني */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav h3 {
+    color: #c4a484; /* بني ذهبي */
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #e8d5b7;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: #c4a484;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#4d0000;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* المحتوى الرئيسي */
+main, body > p, body > a {
+    max-width: 800px;
+    margin: 80px auto 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+p {
+    font-size: 1.4rem;
+    color: #000000;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
