@@ -13,12 +13,6 @@
   - استعلامات محمية من SQL Injection باستخدام PDO Prepared Statements
   - Session management مع `session_regenerate_id`
 
-## المتطلبات
 
-- PHP 7.4+ (يفضل 8.x)
-- MySQL / MariaDB
-- خادم ويب (Apache / Nginx) أو XAMPP / WAMP / Laragon محلياً
-
-##
 Developer: Noufle  
 © 2026 World series
